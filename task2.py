@@ -7,11 +7,5 @@ import random
 list_of_nums = [random.randint(1,11) for i in range (5)]
 print (list_of_nums)
 
-def find_sum_of_odd_elements (some_list):
-    result = 0
-    for i in range (1, len(some_list),2):
-        result = result + some_list[i]
-    return(result)
-
-sum = find_sum_of_odd_elements(list_of_nums)
-print (f'сумма элементов списка, стоящих на нечётной позиции, равна {sum}')
+list_of_nums = list(filter(lambda elem: list_of_nums.index(elem)%2, list_of_nums))
+print(sum(list_of_nums))
